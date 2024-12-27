@@ -8,3 +8,4 @@ class ChatGPT(StatesGroup):
 
 class Image(StatesGroup):
     SendImage = State()
+    SelectModel = State()
