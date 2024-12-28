@@ -54,3 +54,10 @@ def clear_context(user_id):
         return True
     else:
         return False
+    
+def get_all_users():
+    bd = sqlite3.connect('Neiro.bd')
+    cur = bd.cursor()
+    cur.execute("SELECT user_id FROM ContextGPT")
+    users = cur.fetchall()
+    return users

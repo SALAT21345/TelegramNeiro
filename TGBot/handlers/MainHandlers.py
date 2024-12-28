@@ -75,9 +75,9 @@ async def get_prompt_generate_image(message:Message,state:FSMContext):
 async def ClearContext(callback:CallbackQuery):
     answer = clear_context(callback.message.chat.id)
     if answer == True:
-        callback.message.answer("Code: Успешно! \nКонтекст сброшен.")
+        await callback.message.answer("Code: Успешно! \nКонтекст сброшен.")
     else:
-        callback.message.answer("Ошибка: Возможно, контекста не существовало пока что или вы недавно его отчищали..")
+        await callback.message.answer("Ошибка: Возможно, контекста не существовало пока что или вы недавно его отчищали..")
     
 
 ############################################
